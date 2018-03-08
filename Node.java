@@ -18,6 +18,16 @@ void Print(Node head) {
     }
 }
 
+void ReversePrint(Node head) {
+  // This is a "method-only" submission. 
+  // You only need to complete this method. 
+    if(head != null){
+        ReversePrint(head.next);
+        System.out.println(head.data);
+    }
+
+}
+
 Node Delete(Node head, int position) {
   // Complete this method
    if(head != null){
