@@ -18,6 +18,26 @@ void Print(Node head) {
     }
 }
 
+Node Delete(Node head, int position) {
+  // Complete this method
+   if(head != null){
+    if(position == 0){
+      head = head.next;
+    }
+       else{
+           Node curr = head;
+           int count = 0;
+           while(count < position-1){
+               curr = curr.next;
+               count++;
+           }
+           curr.next = curr.next.next;
+          
+       }
+   }
+ return head;
+}
+
 Node InsertNth(Node head, int data, int position) {
    // This is a "method-only" submission. 
     // You only need to complete this method.
