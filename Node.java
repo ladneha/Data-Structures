@@ -28,6 +28,18 @@ void ReversePrint(Node head) {
 
 }
 
+Node Reverse(Node head) {
+    if(head == null || head.next==null){
+        return head;
+    }else{
+        Node remaining = Reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return remaining;
+    }
+
+}
+
 Node Delete(Node head, int position) {
   // Complete this method
    if(head != null){
