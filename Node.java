@@ -17,6 +17,24 @@ void Print(Node head) {
     }
     }
 }
+
+int GetNode(Node head,int n) {
+     // This is a "method-only" submission. 
+     // You only need to complete this method. 
+    Node current = head;
+    int count = 0;
+    while(current.next != null){
+        current = current.next;
+        count++;
+    }
+    int num = count-n+1;
+    for(int i=1; i<num; i++){
+        head=head.next;
+    }
+    return head.data;
+}
+
+
 Node mergeLists(Node headA, Node headB) {
      // This is a "method-only" submission. 
      // You only need to complete this method 
