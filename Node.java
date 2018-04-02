@@ -18,6 +18,24 @@ void Print(Node head) {
     }
 }
 
+boolean hasCycle(Node head) {
+     if(head==null){
+         return false;
+     }
+    Node slow = head;
+    Node fast = head;
+    while(fast!=null && fast.next!=null){
+        slow = slow.next;
+        fast = fast.next.next;
+        
+        if(fast==slow){
+            return true;
+        }
+    }
+    return false;
+}
+
+
 Node RemoveDuplicates(Node head) {
   // This is a "method-only" submission. 
   // You only need to complete this method. 
