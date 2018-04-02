@@ -18,6 +18,23 @@ void Print(Node head) {
     }
 }
 
+Node RemoveDuplicates(Node head) {
+  // This is a "method-only" submission. 
+  // You only need to complete this method. 
+   Node curr = head;
+    Node currn = curr.next;
+    while(currn != null){
+        if(curr.data == currn.data){
+            curr.next = currn.next;
+            currn = curr.next;
+        }else{
+            curr = currn;
+            currn = curr.next;
+        }
+    }
+    return head;
+}
+
 int GetNode(Node head,int n) {
      // This is a "method-only" submission. 
      // You only need to complete this method. 
