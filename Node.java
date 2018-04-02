@@ -17,7 +17,26 @@ void Print(Node head) {
     }
     }
 }
+Node mergeLists(Node headA, Node headB) {
+     // This is a "method-only" submission. 
+     // You only need to complete this method 
+   if (headA == null && headB == null) return null;
+    else if (headA == null) return headB;
+    else if (headB == null) return headA;
+    
+    if(headA.data <= headB.data)
+        headA.next = mergeLists(headA.next, headB);
+    else {
+        Node temp = headB;
+        headB = headB.next;
+        temp.next = headA;
+        headA = temp;
+        headA.next = mergeLists(headA.next, headB);
+    }
+    return headA;
+    
 
+}
 void ReversePrint(Node head) {
   // This is a "method-only" submission. 
   // You only need to complete this method. 
