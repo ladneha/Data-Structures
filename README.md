@@ -1,2 +1,2 @@
 # Data-Structures
-This repository contains dtastructure practice solutions in Java
+This repository contains datastructure practice solutions in Java
